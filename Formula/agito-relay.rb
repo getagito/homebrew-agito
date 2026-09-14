@@ -33,7 +33,7 @@ class AgitoRelay < Formula
   service do
     run [opt_bin/"agito-relay"]
     keep_alive true
-    environment_variables PATH: std_service_path_env
+    environment_variables PATH: std_service_path_env, RUST_LOG: "warn"
     log_path var/"log/agito-relay.log"
     error_log_path var/"log/agito-relay.log"
   end
