@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.4.1"
+  version "0.4.3"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.1/agito-relay-0.4.1-aarch64-apple-darwin.tar.gz"
-      sha256 "441262e50c5575943d9e3e3478bf3a21edb73b0f1bff547c0028088a53d1ea2e"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.3/agito-relay-0.4.3-aarch64-apple-darwin.tar.gz"
+      sha256 "0a7bdb63b12c530c1927d75ef3a2c00f2f2d49d1b6fbf28f2cde528234974792"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.1/agito-relay-0.4.1-x86_64-apple-darwin.tar.gz"
-      sha256 "3984760126ed0c2a159aa8e9aaab4d1a78fd87b3d040203ef75e06471d3d4655"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.3/agito-relay-0.4.3-x86_64-apple-darwin.tar.gz"
+      sha256 "3056c390e5c6efef33f0113f9b18fc52ee95e7762e6e259b3300e70b0707b2a5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.1/agito-relay-0.4.1-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "3422d22d6992772b2920d1c5e36d71a427c032ab7778b03410d887632b0d9f00"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.3/agito-relay-0.4.3-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "3cb2cf691868c346b1b3e2b18b12a0b067d3f532698270708de1e87f7a3cf3a6"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.1/agito-relay-0.4.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5ec332ecbd5e435c8b793d0b6927229a0a6f1ed06cf182be03ee2cf69ad2c289"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.4.3/agito-relay-0.4.3-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "85ad27dc274899a9d70590ec28da153b9c0b88afed0495aa09cf5c0953a1080b"
     end
   end
 
