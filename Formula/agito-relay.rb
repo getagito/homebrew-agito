@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.9.5"
+  version "0.10.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.9.5/agito-relay-0.9.5-aarch64-apple-darwin.tar.gz"
-      sha256 "91f2fc3307798bb745ecbda59a737857435c283302a3f60aa8349c355e78fc1c"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.0/agito-relay-0.10.0-aarch64-apple-darwin.tar.gz"
+      sha256 "62a449e8b96ba41011595bdf49c990fa93aee307e255e07e5f8db604106af7ba"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.9.5/agito-relay-0.9.5-x86_64-apple-darwin.tar.gz"
-      sha256 "f13bbd45b5ae843d09bb4cd5f44ae3aef4b933391451d745135098ec2f597481"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.0/agito-relay-0.10.0-x86_64-apple-darwin.tar.gz"
+      sha256 "3bbb2f00c57f956a6427577db3a99a321bb36849ca810e55606cd185ee46e0a1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.9.5/agito-relay-0.9.5-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0ac0ed2e3a2bfb961413ebe96d6b738e2d551320ccb8a2e3699e0a00aca85386"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.0/agito-relay-0.10.0-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "6397a78140e623f694981187f497e3eae8eb1319e0471fdc3db5a6a14d8ff8c5"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.9.5/agito-relay-0.9.5-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "20d800e729678ecd7a484c1c0b428d05257acdd727043b803c1cdd2c75ab8584"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.0/agito-relay-0.10.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "79626a352aa5f1c7b28d908af340b9f25b35928255fcca9af5b51c0c4f6d7bdc"
     end
   end
 
