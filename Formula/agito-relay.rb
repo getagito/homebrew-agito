@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.3"
+  version "0.10.4"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.3/agito-relay-0.10.3-aarch64-apple-darwin.tar.gz"
-      sha256 "ba0d0c7915f36870b2a46b41b62ec8e09bcede8de5596d64f3480ed52b4d3f21"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.4/agito-relay-0.10.4-aarch64-apple-darwin.tar.gz"
+      sha256 "daf7d518b6eddf91ce94b3ea724bee5e677ced2f2396d352b77793150b5809df"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.3/agito-relay-0.10.3-x86_64-apple-darwin.tar.gz"
-      sha256 "e05353087704f3d263502705bede6144c35ecb16dbe87266d67ff68b88931e1a"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.4/agito-relay-0.10.4-x86_64-apple-darwin.tar.gz"
+      sha256 "99b41cbea3a23297cf363f8a04115afb7205b9084636302e1078bd7d8b7bbf3a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.3/agito-relay-0.10.3-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0e22a47bcdd85dea37f2fdbb32187dfa09e0774a6e8135fefa5476396746e41c"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.4/agito-relay-0.10.4-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "155f58883bdb7b77d3a39470679342af7a274ee3b2f8e76544666882cbbcdd71"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.3/agito-relay-0.10.3-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "05a270fb2ae2b0bcba8530bfb89185984f980e0e5c5c527cc9aea2b507e55bba"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.4/agito-relay-0.10.4-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "354f5e16d215bc0f33fa255e4973b417526495c3f93077261f30038f016380f7"
     end
   end
 
