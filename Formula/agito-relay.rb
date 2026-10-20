@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.11"
+  version "0.10.12"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.11/agito-relay-0.10.11-aarch64-apple-darwin.tar.gz"
-      sha256 "d0e43c92311b28d1058ed4d17206bbf1fa9eec985bc4aac7df368f13ce3f02bc"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.12/agito-relay-0.10.12-aarch64-apple-darwin.tar.gz"
+      sha256 "b6bf63d94292703b472cc27a68070162cbfec0719617a5dc9c0147f869fbc329"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.11/agito-relay-0.10.11-x86_64-apple-darwin.tar.gz"
-      sha256 "49d189c442581813393b30434cd7efd70699f8047d11277592302b3bf174cd92"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.12/agito-relay-0.10.12-x86_64-apple-darwin.tar.gz"
+      sha256 "16159c0b3e5cbc4f0a5d58c62a50e3eb54a3cd515bfda92b43cf21f07dae7dc5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.11/agito-relay-0.10.11-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0b7894d5932f28879df6f0e7acec306bc9fb16c00e2b8cc1014fcbeb47743b58"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.12/agito-relay-0.10.12-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "bddc31204644a385d82e93d1c06b90b35cb351bc5986e47a81a1ca06713e7496"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.11/agito-relay-0.10.11-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "d4c38c9fbec37ddf29ecc6460b6982d0fd2bc48c6e9df0cd537773656c18e49a"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.12/agito-relay-0.10.12-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "bc69078dcb18b565ca6d4df33dae46295efc3d322a2ef0691bc6baffb611b720"
     end
   end
 
@@ -47,7 +47,10 @@ class AgitoRelay < Formula
       On Linux, keep it running after you log out of SSH:
         loginctl enable-linger "$USER"
 
-      Then turn on notifications in the Agito app. It pairs with this machine over SSH.
+      Then add this machine in the Agito app (prints a QR code to scan with your phone):
+        agito-relay host setup
+
+      Finally turn on notifications in the Agito app. It connects to this machine over SSH.
 
       Herdr sessions work without extra setup. For Claude Code running directly in tmux,
       merge the hooks into your Claude settings (prints the merged file, does not overwrite):
