@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.8"
+  version "0.10.10"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.8/agito-relay-0.10.8-aarch64-apple-darwin.tar.gz"
-      sha256 "c2ea89786512b8b48bb11afe11ed2566920f12abb776478b97e79b4421f0e029"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.10/agito-relay-0.10.10-aarch64-apple-darwin.tar.gz"
+      sha256 "6c85f6e3b643a0480f4492c11d40469a259aee4688a1d985aad9ab5984cd2c3c"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.8/agito-relay-0.10.8-x86_64-apple-darwin.tar.gz"
-      sha256 "f81b6b4bb3845347c3a8417407f66ce11773a208fc915a6cbd141ab2356bee7b"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.10/agito-relay-0.10.10-x86_64-apple-darwin.tar.gz"
+      sha256 "6d5fa7d0c0e2a7f5f83247cc74c2bfff3b00d39f7a5786f5742543693f1d7561"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.8/agito-relay-0.10.8-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "36513cc342bdea1fc762463d67b2d95c9ce8928c6c3c05e797fd57790056967e"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.10/agito-relay-0.10.10-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "cd08ff61f834ac20f77aa315d06edabae59e58166e276360aea1a52b07818e14"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.8/agito-relay-0.10.8-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c3b64b720d42dddeac0de974126c5f50c612f3e8bfa086afb7a7f42ec8d601bb"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.10/agito-relay-0.10.10-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "89007572ddb1b6482364a00d9cbcb7003581a241c9b3f61cdbbda46cead3da1d"
     end
   end
 
