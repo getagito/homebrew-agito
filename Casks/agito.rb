@@ -1,6 +1,6 @@
 cask "agito" do
-  version "1.0,202610232219"
-  sha256 "ddebb1a9a2b015b306149fd87c66d7f69d62206e5d15623d4988d48940ef8a8b"
+  version "1.0,202610242200"
+  sha256 "bf812c9adde44fcde3d548654d3b1221bba1ced030a4eb8a17c3587dab1c7b0e"
 
   url "https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v#{version.csv.first}-#{version.csv.second}/Agito-#{version.csv.first}-#{version.csv.second}.zip"
   name "Agito"
