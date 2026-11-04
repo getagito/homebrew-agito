@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.20"
+  version "0.10.21"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.20/agito-relay-0.10.20-aarch64-apple-darwin.tar.gz"
-      sha256 "1e3917d0e463b4b7a78e07a8577cefb5a0220fb0ec3ff2c01f81d3df11e83b21"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-aarch64-apple-darwin.tar.gz"
+      sha256 "7dcf759af125c8c5689f1502225340cb00c67ac3bed77c8c1b1b67fc3bc2ee30"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.20/agito-relay-0.10.20-x86_64-apple-darwin.tar.gz"
-      sha256 "67ea93356509d604bc4130921a66a1f07f31a7117be1807bad8258fc992aadbb"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-x86_64-apple-darwin.tar.gz"
+      sha256 "0bedff26e05689e621be2161836334a585188931a12159dd874a5c0fd6ad4bb5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.20/agito-relay-0.10.20-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "7211e352266b5552c56a2e23cf4c91d5bedfdf357c313a3665bd87000bc69ff3"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "d99b3843ab4631dbe8adfe97ed45bd7264effb9673cbcd993a6eeb28bb0d4a23"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.20/agito-relay-0.10.20-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "51454028568b2dc4be39fa0103caef1248b731b94b804858554f6358fe8384ee"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2a4c4072cac293805cfdb853a9e4e64f08835a4a914ebc13462ce570fe66471e"
     end
   end
 
