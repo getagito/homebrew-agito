@@ -79,6 +79,14 @@ else
   cp "$tmp/package/agito-relay" "$BIN_DIR/.agito-relay.new"
   chmod 0755 "$BIN_DIR/.agito-relay.new"
   mv -f "$BIN_DIR/.agito-relay.new" "$BIN_DIR/agito-relay"
+  # macOS packages include agito-simbridge (the iOS Simulator service). The Agito app
+  # looks for it on PATH and then in ~/.local/bin, next to agito-relay.
+  if [ -f "$tmp/package/agito-simbridge" ]; then
+    cp "$tmp/package/agito-simbridge" "$BIN_DIR/.agito-simbridge.new"
+    chmod 0755 "$BIN_DIR/.agito-simbridge.new"
+    mv -f "$BIN_DIR/.agito-simbridge.new" "$BIN_DIR/agito-simbridge"
+    say "Installed $BIN_DIR/agito-simbridge"
+  fi
   cp "$tmp/package/claude-hooks.json" "$tmp/package/merge-claude-hooks.mjs" "$SHARE_DIR/"
   say "Installed $BIN_DIR/agito-relay"
 fi

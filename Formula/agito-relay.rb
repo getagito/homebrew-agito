@@ -1,32 +1,40 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.21"
+  version "0.10.22"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-aarch64-apple-darwin.tar.gz"
-      sha256 "7dcf759af125c8c5689f1502225340cb00c67ac3bed77c8c1b1b67fc3bc2ee30"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.22/agito-relay-0.10.22-aarch64-apple-darwin.tar.gz"
+      sha256 "e23453c9022850c2ed2d3fcfedc5429c2720521d82b32ce2e4bdeeaf44816757"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-x86_64-apple-darwin.tar.gz"
-      sha256 "0bedff26e05689e621be2161836334a585188931a12159dd874a5c0fd6ad4bb5"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.22/agito-relay-0.10.22-x86_64-apple-darwin.tar.gz"
+      sha256 "ea005cd0b657739a65dcb2d9f847dc0a90c268d70ed2e420b3e098802f901ed4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "d99b3843ab4631dbe8adfe97ed45bd7264effb9673cbcd993a6eeb28bb0d4a23"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.22/agito-relay-0.10.22-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "445745c840fbcd07941a7230e9639fdc281f0a7a509ad19ea7f456e12c855a53"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.21/agito-relay-0.10.21-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2a4c4072cac293805cfdb853a9e4e64f08835a4a914ebc13462ce570fe66471e"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.22/agito-relay-0.10.22-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "28c133a543bf3d84c872dd81f1c1a87f35a5c214a518c3a290ee4f6a1936df9e"
     end
   end
 
   def install
     bin.install "agito-relay"
+    # macOS 包里有 agito-simbridge 就一起装进 bin。Intel 包没编出来时文件不存在，跳过。
+    if OS.mac?
+      if (buildpath/"agito-simbridge").exist?
+        bin.install "agito-simbridge"
+      elsif Hardware::CPU.arm?
+        odie "arm64 package is missing agito-simbridge"
+      end
+    end
     pkgshare.install "claude-hooks.json", "merge-claude-hooks.mjs"
   end
 
@@ -60,5 +68,10 @@ class AgitoRelay < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/agito-relay --version")
+    if OS.mac? && (bin/"agito-simbridge").exist?
+      lines = shell_output("#{bin}/agito-simbridge --version").lines.map(&:strip)
+      assert_match(/\Aagito-simbridge \d+\.\d+\.\d+\z/, lines.fetch(0))
+      assert_match(/\Aprotocol \d+\z/, lines.fetch(1))
+    end
   end
 end
