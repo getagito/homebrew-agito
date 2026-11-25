@@ -1,27 +1,27 @@
 class AgitoRelay < Formula
   desc "Sends coding agent status from Herdr and tmux to Agito push notifications"
   homepage "https://getagito.dev"
-  version "0.10.40"
+  version "0.10.41"
 
   on_macos do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.40/agito-relay-0.10.40-aarch64-apple-darwin.tar.gz"
-      sha256 "b390a32f96c2e5f4fc7c6f8e256e2009d569a797b170058cc597997135b6333f"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.41/agito-relay-0.10.41-aarch64-apple-darwin.tar.gz"
+      sha256 "f927ea102968766a645812a44912f7ca8e0e51ade8159bad90fddc7f4195cb57"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.40/agito-relay-0.10.40-x86_64-apple-darwin.tar.gz"
-      sha256 "8d25be37e8dd3f001b6c34c2f6b22172e489c9e74eec9041a2617ab8700dae10"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.41/agito-relay-0.10.41-x86_64-apple-darwin.tar.gz"
+      sha256 "a579a070ddb607bc91385665482ed862f832bff6fa48d2727facce596f8645f3"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.40/agito-relay-0.10.40-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "0f8cfa9183f635edc8ee7ccf407d2a1fc254ebee510a80344251fe4e59780de2"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.41/agito-relay-0.10.41-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "46c2f4e0ef73591927660727ae2852c47e77866280d83e78cb72d346bd312d93"
     end
     on_intel do
-      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.40/agito-relay-0.10.40-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "1b9a3f58647e290d2e198b08cc6d6dcd2d6542f8790692efc347a261b3558ef1"
+      url "https://github.com/getagito/homebrew-agito/releases/download/agito-relay-v0.10.41/agito-relay-0.10.41-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e7ba5c1ef422c4c52f4df7c4ba5a97bfba5ba5ef2230fc35a7a9d01c05514513"
     end
   end
 
@@ -41,6 +41,8 @@ class AgitoRelay < Formula
   service do
     run [opt_bin/"agito-relay"]
     keep_alive true
+    # 按交互进程调度：不写时 launchd 按 daemon 起（线程 PRI 20），主机满负载时 relay 请求慢约 25 倍。
+    process_type :interactive
     # 不设 RUST_LOG 时 relay 只输出 error，注册失败等 warn 会被过滤掉。
     environment_variables PATH: std_service_path_env, RUST_LOG: "warn"
     log_path var/"log/agito-relay.log"
