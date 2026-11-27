@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Agito for Mac</title>
+    <item>
+      <title>Agito 1.6 (202611280244)</title>
+      <pubDate>Fri, 27 Nov 2026 18:57:26 +0000</pubDate>
+      <sparkle:version>202611280244</sparkle:version>
+      <sparkle:shortVersionString>1.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v1.6-202611280244/Agito-1.6-202611280244.zip" type="application/octet-stream" sparkle:edSignature="212FUsFm9l5HOrlnZw61ZaK5bxGxZqrgTw/jCrY0/EL/AzHaQ6AzXvC9qXF5kJnGzuKg2wr96Lj++iVoPMWWAA==" length="96499441"/>
+    </item>
+  </channel>
+</rss>
