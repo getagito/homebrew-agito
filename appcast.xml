@@ -3,12 +3,12 @@
   <channel>
     <title>Agito for Mac</title>
     <item>
-      <title>Agito 1.6 (202611280244)</title>
-      <pubDate>Fri, 27 Nov 2026 18:57:26 +0000</pubDate>
-      <sparkle:version>202611280244</sparkle:version>
+      <title>Agito 1.6 (202611280911)</title>
+      <pubDate>Sat, 28 Nov 2026 01:40:07 +0000</pubDate>
+      <sparkle:version>202611280911</sparkle:version>
       <sparkle:shortVersionString>1.6</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v1.6-202611280244/Agito-1.6-202611280244.zip" type="application/octet-stream" sparkle:edSignature="212FUsFm9l5HOrlnZw61ZaK5bxGxZqrgTw/jCrY0/EL/AzHaQ6AzXvC9qXF5kJnGzuKg2wr96Lj++iVoPMWWAA==" length="96499441"/>
+      <enclosure url="https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v1.6-202611280911/Agito-1.6-202611280911.dmg" type="application/octet-stream" sparkle:edSignature="CaaC+FQkIG3M5y2gxAGXdp4hpTsMzAO44fRmcGEiapY9kYER++Wjjx3OrWANdLNOcI1caw8bK7KIoWY6Ouc6BA==" length="96444265"/>
     </item>
   </channel>
 </rss>

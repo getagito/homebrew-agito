@@ -1,8 +1,8 @@
 cask "agito" do
-  version "1.6,202611280244"
-  sha256 "6b628f93516ae701a5690f1a0ced706425515f1bed0055d54988ebccba7cbc79"
+  version "1.6,202611280911"
+  sha256 "d8f74c2b0bde6e4608e2821ec9bc776a11ff3e6e14b9e30393c874d328eaff61"
 
-  url "https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v#{version.csv.first}-#{version.csv.second}/Agito-#{version.csv.first}-#{version.csv.second}.zip"
+  url "https://github.com/getagito/homebrew-agito/releases/download/agito-mac-v#{version.csv.first}-#{version.csv.second}/Agito-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Agito"
   desc "SSH terminal for AI coding agents on herdr and tmux"
   homepage "https://getagito.dev"
